@@ -1,0 +1,142 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Header */
+header {
+width: 100%;
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+  max-width: 420px;
+}
+
+.heading{
+background: #1A3C5E;
+  color: white;
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+  max-width: 420px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 10px 16px;
+  background: #2E86AB;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-bar button:hover { background: #1a6a8a; }
+
+/* Hero */
+#weather-hero {
+  background: #2E86AB;
+  color: white;
+  text-align: center;
+  padding: 32px 16px;
+  border-radius: 16px 16px 16px 16px;
+}
+
+#weather-icon { font-size: 48px; }
+#temperature { font-size: 48px; font-weight: bold; }
+
+/* Stats */
+#stats-row {
+  display: flex;
+  text-align: center;
+  border: 1px solid #e3e2e2;
+  border-radius: 12px 12px 12px 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#stats-row div {
+  flex: 1;
+  padding: 16px;
+  border-right: 1px solid rgb(239, 243, 251);
+}
+
+#stats-row div:last-child { border-right: none; }
+
+/* Forecast */
+#forecast-section {
+  border-radius: 0 0 12px 12px;
+
+}
+
+.forecast-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.forecast-row {
+    margin-bottom: 8px;
+    background: rgb(239, 243, 251);
+}
+
+.forecast-row:last-child {
+    margin-bottom: 0;
+}
+
+
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 12px;
+  border: 1px solid #e3e2e2;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+
+.forecast-row:hover { background: #f5f9fc; }
+
+/* Utility */
+.hidden { display: none; }
+
+#error-message { color: red; text-align: center; padding: 12px; }
+#loading { text-align: center; padding: 20px; color: #555; }
+
+/* Mobile */
+@media (max-width: 480px) {
+  body { padding: 0; }
+  header, main { border-radius: 0; }
+}
